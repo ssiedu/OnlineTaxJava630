@@ -11,7 +11,7 @@ public class Guidelines extends HttpServlet {
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        //response.setContentType("application/msword");
+        response.setContentType("application/msword");
         
         
         //read-the-excel-file (e:/info/TaxRates.xlsx)

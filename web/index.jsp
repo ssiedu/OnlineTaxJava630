@@ -4,8 +4,8 @@
         <hr>
         <pre>
         <a href="details.jsp">Find-Tax-Liability</a>
-        <a href="TaxRates">Download-Tax-Rates-Chart</a>
-        <a href="Guidelines">Download-Guidelines</a>
+        <a href="Rates.xlsx">Download-Tax-Rates-Chart</a>
+        <a href="Guidelines.docx">Download-Guidelines</a>
         </pre>
         <hr>
     </body>

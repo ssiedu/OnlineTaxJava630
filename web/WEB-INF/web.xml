@@ -18,15 +18,25 @@
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>TaxRates</servlet-name>
-        <url-pattern>/TaxRates</url-pattern>
+        <url-pattern>/Rates.xlsx</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>Guidelines</servlet-name>
-        <url-pattern>/Guidelines</url-pattern>
+        <url-pattern>/Guidelines.docx</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
             30
         </session-timeout>
     </session-config>
+    
+    <welcome-file-list>
+        <welcome-file>
+            index.jsp
+        </welcome-file>
+    </welcome-file-list>
+        
+    
+    
+    
 </web-app>
