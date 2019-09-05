@@ -12,6 +12,26 @@ public class TaxCalculator extends HttpServlet {
         //reads the request
         String s1=request.getParameter("t1");
         String s2=request.getParameter("t2");
+        String s[]=request.getParameterValues("assets");
+        int wtax=0;
+        if(s!=null){
+            wtax=s.length*1000;
+        }
+        String s3=request.getParameter("c1");
+        int nriTax=0;
+        if(s3!=null){
+            nriTax=5000;
+        }
+        
+        String s4=request.getParameter("r1");
+        int pTax=0;
+        if(s4.equals("service")){
+            pTax=2000;
+        }else{
+            pTax=6000;
+        }
+        
+        
         //processes the request
         int income=Integer.parseInt(s1);
         int age=Integer.parseInt(s2);
@@ -43,8 +63,26 @@ public class TaxCalculator extends HttpServlet {
         out.println("<td>Tax</td>");
         out.println("<td>"+tax+"</td>");
         out.println("</tr>");
+        out.println("<tr>");
+        out.println("<td>W.Tax</td>");
+        out.println("<td>"+wtax+"</td>");
+        out.println("</tr>");
+        out.println("<tr>");
+        out.println("<td>NRI-Tax</td>");
+        out.println("<td>"+nriTax+"</td>");
+        out.println("</tr>");
+         out.println("<tr>");
+        out.println("<td>Prof-Tax</td>");
+        out.println("<td>"+pTax+"</td>");
+        out.println("</tr>");
         out.println("</table>");
         out.println("<hr>");
+        if(s!=null){
+            out.println("Assets Declared By You : ");
+            for(String tmp:s){
+                out.println(tmp);
+            }
+        }
         out.println("<marquee>Be A Responsible Citizen. Pay Taxes On Time Honestly</marquee>");
         out.println("</body>");
         out.println("</html>");

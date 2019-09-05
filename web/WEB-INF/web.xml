@@ -12,6 +12,10 @@
         <servlet-name>Guidelines</servlet-name>
         <servlet-class>Guidelines</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Demo</servlet-name>
+        <servlet-class>Demo</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>TaxCalculator</servlet-name>
         <url-pattern>/TaxCalculator</url-pattern>
@@ -24,19 +28,18 @@
         <servlet-name>Guidelines</servlet-name>
         <url-pattern>/Guidelines.docx</url-pattern>
     </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Demo</servlet-name>
+        <url-pattern>/Demo</url-pattern>
+    </servlet-mapping>
     <session-config>
         <session-timeout>
             30
         </session-timeout>
     </session-config>
-    
     <welcome-file-list>
         <welcome-file>
             index.jsp
         </welcome-file>
     </welcome-file-list>
-        
-    
-    
-    
 </web-app>

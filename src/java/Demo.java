@@ -1,32 +1,26 @@
-import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.PrintWriter;
 import javax.servlet.ServletException;
-import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-public class TaxRates extends HttpServlet {
+public class Demo extends HttpServlet {
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        response.setContentType("text/html;charset=UTF-8");
+        PrintWriter out = response.getWriter();
         
-        //response.setContentType("application/vnd.ms-excel");
+        //String s1=request.getParameter("t1");
         
+        String s[]=request.getParameterValues("t1");
+        String s2=request.getParameter("t2");
+        //String s3=request.getParameter("t1");
         
-        //read-the-excel-file (e:/info/TaxRates.xlsx)
-        FileInputStream fis=new FileInputStream("e:/info/TaxRates.xlsx");
-        int n=fis.available();
-        byte b[]=new byte[n];
-        fis.read(b);
-        fis.close();
-        //send the contents of excel file to client
-        //this time our response is in binary form
-        //to send the binary response we use
-        //ServletOutputStream
-        ServletOutputStream out=response.getOutputStream();
-        out.write(b);
-        out.close();
+        out.println("First Value : "+s[0]);
+        out.println("Second Value : "+s2);
+        out.println("Third Value : "+s[1]);
         
     }
 
